@@ -304,7 +304,7 @@
                 $("#Logo_ar").append("<div class=\"form-row\">\n" +
                     "    <div class=\"col-md-12 mb-4\">\n" +
                     "      <label for=\"Title'\">Title'</label>\n" +
-                    "      <input type=\"text\"  placeholder=\"Please enter data\"   class=\"form-control\"   name=\"Title'\"  id=\"Title'\" placeholder=\"\" value=\"{{Request::old('Title'')}}\" >\n" +
+                    "      <input type=\"text\"  placeholder=\"Please enter data\"   class=\"form-control\"   name=\"Title'\"  id=\"Title'\" placeholder=\"\" value=\"{{Request::old('Title'')}}\" > +
                     "      @if ($errors->has('Title''))\n" +
                     "      <div class=\"invalid-feedback\">\n" +
                     "        {{ $errors->first('Title'') }}\n" +
