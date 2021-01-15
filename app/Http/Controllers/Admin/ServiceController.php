@@ -236,6 +236,8 @@ class ServiceController extends Controller
                     'File' => $filename,
                     'Type' => "Logo",
                     'service' => $request->id,
+                    'Title' => $request->Title,
+                    'paragraph' => $request->paragraph,
                 ]);
 
             }
@@ -253,6 +255,8 @@ class ServiceController extends Controller
                     'File' => $filename,
                     'Type' => "Products",
                     'service' => $request->id,
+                    'Title' => $request->Title,
+                    'paragraph' => $request->paragraph,
                 ]);
 
             }
@@ -270,6 +274,8 @@ class ServiceController extends Controller
                     'File' => $filename,
                     'Type' => "Projects",
                     'service' => $request->id,
+                    'Title' => $request->Title,
+                    'paragraph' => $request->paragraph,
                 ]);
 
             }

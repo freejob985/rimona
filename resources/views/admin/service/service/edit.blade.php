@@ -301,7 +301,13 @@
             $("#Logo").click(function () {
 
               
-                $("#Logo_ar").append(' <div class=\"custom-file\"> <input type=file name=\"Logo[]\" ">+\n' +
+                $("#Logo_ar").append(' <div class=\"form-group\">\n" +
+                    "        <textarea  placeholder=\"Please enter data  Title\" name=\"Title\"   style=\"resize: none;font-size: 18px;font-weight: 600;color: white !important;background: #0e1726;\"class=\"form-control\" rows=\"5\" id=\"comment\"></textarea>\n" +
+                    "        @if ($errors->has('Title'))\n" +
+                    "        <span class=\"helper-text\" data-error=\"wrong\" data-success=\"right\">{{ $errors->first('Title') }}</span>\n" +
+                    "        @endif\n" +
+                    "      </div>
+                     <div class=\"custom-file\"> <input type=file name=\"Logo[]\" ">+\n' +
                 '<label >Choose Images</label>');
               //  return false;
 
@@ -313,14 +319,24 @@
               
 
 
-                $("#Products_ar").append(' <div class=\"custom-file\"> <input type=file name=\"Products[]\" ">+\n' +
+                $("#Products_ar").append(' <div class=\"form-group\">\n" +
+                    "        <textarea  placeholder=\"Please enter data  Title\" name=\"Title\"   style=\"resize: none;font-size: 18px;font-weight: 600;color: white !important;background: #0e1726;\"class=\"form-control\" rows=\"5\" id=\"comment\"></textarea>\n" +
+                    "        @if ($errors->has('Title'))\n" +
+                    "        <span class=\"helper-text\" data-error=\"wrong\" data-success=\"right\">{{ $errors->first('Title') }}</span>\n" +
+                    "        @endif\n" +
+                    "      </div> <div class=\"custom-file\"> <input type=file name=\"Products[]\" ">+\n' +
                     '<label >Choose Images</label>');
               //  return false;
             });
 
             $("#Projects").click(function () {
                 
-                $("#Projects_ar").append(' <div class=\"custom-file\"> <input type=file name=\"Projects[]\" ">+\n' +
+                $("#Projects_ar").append(' <div class=\"form-group\">\n" +
+                    "        <textarea  placeholder=\"Please enter data  Title\" name=\"Title\"   style=\"resize: none;font-size: 18px;font-weight: 600;color: white !important;background: #0e1726;\"class=\"form-control\" rows=\"5\" id=\"comment\"></textarea>\n" +
+                    "        @if ($errors->has('Title'))\n" +
+                    "        <span class=\"helper-text\" data-error=\"wrong\" data-success=\"right\">{{ $errors->first('Title') }}</span>\n" +
+                    "        @endif\n" +
+                    "      </div> <div class=\"custom-file\"> <input type=file name=\"Projects[]\" ">+\n' +
                     '<label >Choose Images</label>');
 
               //  return false;

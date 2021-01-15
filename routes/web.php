@@ -539,6 +539,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin', 'checkstatus']
 
 
     Route::post('/upload_sec/upload', 'Admin\ServiceController@upload_sec')->name('admin.service.uploadUpdatess');
+
+    
     Route::post('/service/{id}/uploadUpdate', 'Admin\ServiceController@uploadUpdate')->name('admin.service.uploadUpdate');
     Route::post('/service/store', 'Admin\ServiceController@store')->name('admin.service.store');
     Route::get('/service/{id}/edit', 'Admin\ServiceController@edit')->name('admin.service.edit');
