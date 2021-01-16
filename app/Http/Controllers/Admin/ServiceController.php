@@ -234,82 +234,50 @@ class ServiceController extends Controller
       
 
         if ($request->Type == "Logo") {
-            dd("Catch errors for script and full tracking ( 1 )");
-        } else if ($request->Type == "Products") {
-            dd("Catch errors for script and full tracking ( 2 )");
-        } else if ($request->Type == "Projects") {
-            dd("Catch errors for script and full tracking ( 3 )");
-        }
-
-        if ($request->hasFile('file')) {
-            $file = $request->file;
-            $extension = $file->getClientOriginalExtension();
-            $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
-            $file->move(public_path() . '/files/', $filename);
-
-        } else {
-
-            $filename = "";
-        }
-
-        $files = $request->file('Logo');
-        //  dd("Catch errors for script and full tracking ( 2 )");
-        if ($request->hasFile('Logo')) {
-            //   dd("Catch errors for script and full tracking ( 3 )");
-            foreach ($request->file('Logo') as $file) {
-                //   dd("Catch errors for script and full tracking ( 4 )");
+            if ($request->hasFile('file')) {
+                $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
-                $filename = rand(111, 99999) . '.' . $extension;
+                $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Logo/", $filename);
-                //  dd("Catch errors for script and full tracking ( 1 )");
-                DB::table('sections')->insert([
-                    'File' => $filename,
-                    'Type' => "Logo",
-                    'service' => $request->id,
-                    'Title' => $request->Title,
-                    'paragraph' => $request->paragraph,
-                ]);
-
+    
+            } else {
+    
+                $filename = "";
             }
-        }
-
-        if ($request->hasFile('Products')) {
-            //   dd("Catch errors for script and full tracking ( 3 )");
-            foreach ($request->file('Products') as $file) {
-                //   dd("Catch errors for script and full tracking ( 4 )");
+        } else if ($request->Type == "Products") {
+            if ($request->hasFile('file')) {
+                $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
-                $filename = rand(111, 99999) . '.' . $extension;
+                $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Productsss/", $filename);
-                //  dd("Catch errors for script and full tracking ( 1 )");
-                DB::table('sections')->insert([
-                    'File' => $filename,
-                    'Type' => "Products",
-                    'service' => $request->id,
-                    'Title' => $request->Title,
-                    'paragraph' => $request->paragraph,
-                ]);
-
+    
+            } else {
+    
+                $filename = "";
             }
-        }
-
-        if ($request->hasFile('Projects')) {
-            //   dd("Catch errors for script and full tracking ( 3 )");
-            foreach ($request->file('Projects') as $file) {
-                //   dd("Catch errors for script and full tracking ( 4 )");
+        } else if ($request->Type == "Projects") {
+            if ($request->hasFile('file')) {
+                $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
-                $filename = rand(111, 99999) . '.' . $extension;
+                $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Projects/", $filename);
-                //  dd("Catch errors for script and full tracking ( 1 )");
-                DB::table('sections')->insert([
-                    'File' => $filename,
-                    'Type' => "Projects",
-                    'service' => $request->id,
-                    'Title' => $request->Title,
-                    'paragraph' => $request->paragraph,
-                ]);
-
+    
+            } else {
+    
+                $filename = "";
             }
         }
+
+       
+        DB::table('sections')->insert([
+            'File' => $filename,
+            'Type' => $request->input('Type'),
+            'service' => $request->input('service'),
+            'Title' => $request->input('Title'),
+            'paragraph' => $request->input('paragraph'),
+                    ]);
+       
+        
 
         return redirect()->back()->with('alert-success', 'The file has been uploaded');
 
