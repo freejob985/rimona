@@ -213,8 +213,8 @@
             
           <img src="{{asset('assets/front/img/Projects/' . $servicess->File)}}" alt="Los Angeles" style="width:100%;">
           <div class="carousel-caption">
-            <h3>Los Angeles</h3>
-            <p>LA is always so much fun!</p>
+            <h3>{{ $servicess->Title }}</h3>
+            <p>{!! $servicess->paragraph !!}</p>
           </div>
         </div>
         @endforeach
