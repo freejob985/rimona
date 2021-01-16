@@ -226,7 +226,7 @@
                               <div class="form-row">
                                 <div class="col-md-12 mb-4">
                                   <label for="service'">service'</label>
-                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="service'"  id="service'" placeholder="" value="{{Request::old('service'')}}" >
+                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="service"  id="service" placeholder="" value="{{Request::old('service')}}" >
                                   @if ($errors->has('service''))
                                   <div class="invalid-feedback">
                                     {{ $errors->first('service'') }}
