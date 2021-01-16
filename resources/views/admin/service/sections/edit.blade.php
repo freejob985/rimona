@@ -177,7 +177,6 @@
      
         <br>
         <hr>
-        <button type="submit" class="btn btn-info btn-block" name="sub">تحديث البيانات</button>
     </div>
 </form>
 <hr>
