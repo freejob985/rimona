@@ -45,8 +45,6 @@
     <form method="POST" enctype="multipart/form-data"
     action="{{ route('admin.service.uploadUpdatess') }}">
     @csrf
-
-
     {{-- ##########################(from bg)################################### --}}
     <div class="form-row">
         <div class="col-md-12 mb-4">
