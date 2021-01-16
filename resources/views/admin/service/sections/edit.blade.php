@@ -142,11 +142,11 @@
         <input type="hidden" class="form-control" id="usr" name="Path_full" value="
         <?php
         if($service->Type=="Logo"){
-            $img="assets/front/img/Logo/";
+            $img="assets/front/img/Logo/$service->File";
            }else if($service->Type=="Products"){
-              $img="assets/front/img/Productsss/";
+              $img="assets/front/img/Productsss/$service->File";
            }else{
-              $img="assets/front/img/Projects/";
+              $img="assets/front/img/Projects/$service->File";
            }
            echo  $img
         ?>
