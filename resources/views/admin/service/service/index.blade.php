@@ -64,7 +64,9 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                <div class="col-lg-4 offset-lg-1 mt-2 mt-lg-0">
                   <a href="#" class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#createModal"><i class="fas fa-plus"></i> Add Service</a>
                   &nbsp;&nbsp;&nbsp;
-                  <a href="#" class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#createModal"><i class="fas fa-plus"></i> Additional sections</a>
+                  <a style="
+                  margin-right: 1%;
+              " href="#" class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#createModal"><i class="fas fa-plus"></i> Additional sections</a>
 
                   <button class="btn btn-danger float-right btn-sm mr-2 d-none bulk-delete" data-href="{{route('admin.service.bulk.delete')}}"><i class="flaticon-interface-5"></i> Delete</button>
                </div>
