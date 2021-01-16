@@ -281,7 +281,7 @@ class ServiceController extends Controller
         //     "paragraph" => "<p>ششششششششششششششششششششششششش</p>"
         //     "File" => Illuminate\Http\UploadedFile {#1887 ▶}
         //   ]
-        // dd($request->all());
+         dd($request->all());
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
