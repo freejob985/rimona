@@ -107,7 +107,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                            ?>
                            <tr>
                               <td>
-                                 <input type="checkbox" class="bulk-check" data-val="{{$service->id}}">
+                                 {{$service->id}}
                               </td>
                               <td><img src="{{asset($img)}}" alt="" width="70">
                               </td>
