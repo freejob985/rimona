@@ -212,6 +212,10 @@
         <div class="item {{ $active }}">
             
           <img src="{{asset('assets/front/img/Projects/' . $servicess->File)}}" alt="Los Angeles" style="width:100%;">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>LA is always so much fun!</p>
+          </div>
         </div>
         @endforeach
   
