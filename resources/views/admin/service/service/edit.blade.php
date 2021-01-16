@@ -227,7 +227,7 @@
                                 <div class="col-md-12 mb-4">
                                   <label for="service'">service'</label>
                                   <input type="text"  placeholder="Please enter data"   class="form-control"   name="service"  id="service" placeholder="" value="{{Request::old('service')}}" >
-                                  @if ($errors->has('service''))
+                                  @if ($errors->has('service'))
                                   <div class="invalid-feedback">
                                     {{ $errors->first('service'') }}
                                   </div>
@@ -239,9 +239,9 @@
                                 <div class="col-md-12 mb-4">
                                   <label for="Title'">Title'</label>
                                   <input type="text"  placeholder="Please enter data"   class="form-control"   name="Title'"  id="Title'" placeholder="" value="{{Request::old('Title')}}" >
-                                  @if ($errors->has('Title''))
+                                  @if ($errors->has('Title'))
                                   <div class="invalid-feedback">
-                                    {{ $errors->first('Title'') }}
+                                    {{ $errors->first('Title') }}
                                   </div>
                                   @endif
                                 </div>
@@ -252,9 +252,9 @@
                                 <div class="col-md-12 mb-4">
                                   <label for="paragraph'">paragraph'</label>
                                   <input type="text"  placeholder="Please enter data"   class="form-control"   name="paragraph'"  id="paragraph'" placeholder="" value="{{Request::old('paragraph')}}" >
-                                  @if ($errors->has('paragraph''))
+                                  @if ($errors->has('paragraph'))
                                   <div class="invalid-feedback">
-                                    {{ $errors->first('paragraph'') }}
+                                    {{ $errors->first('paragraph') }}
                                   </div>
                                   @endif
                                 </div>
