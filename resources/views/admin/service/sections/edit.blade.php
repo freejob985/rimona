@@ -42,6 +42,89 @@
 </div>
 <div class="row">
 
+    <form method="POST" enctype="multipart/form-data"
+    action="{{ route('admin.service.uploadUpdatess') }}">
+    @csrf
+
+
+    {{-- ##########################(from bg)################################### --}}
+    <div class="form-row">
+        <div class="col-md-12 mb-4">
+            <label for="File">File</label>
+            <input type="file" placeholder="Please enter data" class="form-control" name="File"
+                id="File" placeholder="" value="{{Request::old('File')}}">
+            @if ($errors->has('File'))
+            <div class="invalid-feedback">
+                {{ $errors->first('File') }}
+            </div>
+            @endif
+        </div>
+    </div>
+    {{-- ############################################################# --}}
+    <div class="form-row">
+        <select class="form-control" name="Type" data-show-subtext="true">
+          <option>Logo</option>
+          <option>Products</option>
+          <option>Projects</option>
+        </select>
+        @if ($errors->has('Type'))
+        <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Type') }}</span>
+        @endif
+      </div>
+    {{-- ############################################################# --}}
+    <div class="form-row">
+        <div class="col-md-12 mb-4">
+            <input type="hidden" placeholder="Please enter data" class="form-control"
+                name="service" id="service" placeholder="" value="{{$service->id}}">
+            @if ($errors->has('service'))
+            <div class="invalid-feedback">
+                {{ $errors->first('service') }}
+            </div>
+            @endif
+        </div>
+    </div>
+    {{-- ############################################################# --}}
+    <div class="form-row">
+        <div class="col-md-12 mb-4">
+            <label for="Title">Title</label>
+            <input type="text" placeholder="Please enter data" class="form-control" name="Title"
+                id="Title" placeholder="" value="{{Request::old('Title')}}">
+            @if ($errors->has('Title'))
+            <div class="invalid-feedback">
+                {{ $errors->first('Title') }}
+            </div>
+            @endif
+        </div>
+    </div>
+    {{-- ############################################################# --}}
+
+
+    <div class="form-group" id="contentFg">
+        <label for="">Content **</label>
+        <textarea class="form-control summernote" name="paragraph" data-height="300"
+            placeholder="Enter content"></textarea>
+        <p id="errcontent" class="mb-0 text-danger em"></p>
+    </div>
+
+
+    {{-- ############################################################# --}}
+
+    {{-- ##########################(end bg)################################### --}}
+    <input type="submit" style="background: #011a25;"
+        class="btn btn-primary btn-large btn-block" value="اضافة  " />
+
+
+
+
+
+    <hr>
+    <br>
+
+    <button type="submit" class="btn btn-success  btn-block">Update </button>
+
+</form>
+
+
 
 
     <form  action="{{route('admin.sections.update')}}" method="post" enctype="multipart/form-data">
