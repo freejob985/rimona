@@ -192,7 +192,12 @@
 </form>
 <hr>
 <br>
-<img class="img-responsive" src="{{asset($img)}}" alt="Chania">
+<img class="img-responsive" src="{{asset($img)}}" alt="Chania" style="
+width: 40%;
+height: 40%;
+margin-top: 2%;
+border: 6px solid white;
+">
 </div>
 @endsection
 
