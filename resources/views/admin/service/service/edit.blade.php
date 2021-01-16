@@ -199,11 +199,6 @@
 
 
 
-
-
-
-
-                            
                             <div class="form-group">
                                 <label for="">Serial Number **</label>
                                 <input type="hidden" class="form-control ltr" name="id" value="{{$service->id}}"
