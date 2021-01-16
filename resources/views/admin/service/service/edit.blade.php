@@ -237,7 +237,7 @@
 
                               <div class="form-row">
                                 <div class="col-md-12 mb-4">
-                                  <label for="Title">Title'</label>
+                                  <label for="Title">Title</label>
                                   <input type="text"  placeholder="Please enter data"   class="form-control"   name="Title"  id="Title" placeholder="" value="" >
                                   @if ($errors->has('Title'))
                                   <div class="invalid-feedback">
