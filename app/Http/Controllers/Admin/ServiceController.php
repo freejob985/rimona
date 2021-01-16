@@ -192,7 +192,6 @@ class ServiceController extends Controller
 
     public function update_sections(Request $request)
     {
- 
 
         if ($request->hasFile('File')) {
             //   dd("Catch errors for script and full tracking ( 3 )");
@@ -203,16 +202,16 @@ class ServiceController extends Controller
                 $file->move($request->Path_full, $filename);
                 DB::table('sections')
                     ->where('id', $request->id)
-                    ->update(['File' => $filename ,
+                    ->update(['File' => $filename,
                         'Title' => $request->Title,
                     ]);
             }
-        }else{
+        } else {
             DB::table('sections')
-            ->where('id', $request->id)
-            ->update([
-                'Title' => $request->Title,
-            ]);  
+                ->where('id', $request->id)
+                ->update([
+                    'Title' => $request->Title,
+                ]);
         }
         Session::flash('success', 'Service updated successfully!');
 
@@ -222,8 +221,37 @@ class ServiceController extends Controller
 
     public function upload_sec(Request $request)
     {
+    //     array:6 [▼
+    //     "_token" => "pYyq5apEElAJKx5qZmrRTu9gneISNcKbyxsxtPdk"
+    //     "Type" => "Products"
+    //     "service" => "297"
+    //     "Title" => "111111111111"
+    //     "paragraph" => "<p>ششششششششششششششششششششششششش</p>"
+    //     "File" => Illuminate\Http\UploadedFile {#1887 ▶}
+    //   ]
+       // dd($request->all());
 
-        dd($request->all());
+      
+
+        if ($request->Type == "Logo") {
+            dd("Catch errors for script and full tracking ( 1 )");
+        } else if ($request->Type == "Products") {
+            dd("Catch errors for script and full tracking ( 2 )");
+        } else if ($request->Type == "Projects") {
+            dd("Catch errors for script and full tracking ( 3 )");
+        }
+
+        if ($request->hasFile('file')) {
+            $file = $request->file;
+            $extension = $file->getClientOriginalExtension();
+            $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
+            $file->move(public_path() . '/files/', $filename);
+
+        } else {
+
+            $filename = "";
+        }
+
         $files = $request->file('Logo');
         //  dd("Catch errors for script and full tracking ( 2 )");
         if ($request->hasFile('Logo')) {
