@@ -248,11 +248,7 @@
                                 <div class="col-md-12 mb-4">
                                   <label for="paragraph">paragraph</label>
                                   <input type="text"  placeholder="Please enter data"   class="form-control"   name="paragraph"  id="paragraph" placeholder="" value="" >
-                                  @if ($errors->has('paragraph'))
-                                  <div class="invalid-feedback">
-                                    {{ $errors->first('paragraph') }}
-                                  </div>
-                                  @endif
+                              
                                 </div>
                               </div>
 
