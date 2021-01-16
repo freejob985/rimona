@@ -225,7 +225,6 @@
                             {{-- ############################################################# --}}
                             <div class="form-row">
                                 <div class="col-md-12 mb-4">
-                                    <label for="service">service</label>
                                     <input type="hidden" placeholder="Please enter data" class="form-control"
                                         name="service" id="service" placeholder="" value="{{$service->id}}">
                                     @if ($errors->has('service'))
@@ -262,6 +261,16 @@
                                     @endif
                                 </div>
                             </div>
+
+
+                            <div class="form-group" id="contentFg">
+                                <label for="">Content **</label>
+                                <textarea class="form-control summernote" name="paragraph" data-height="300"
+                                    placeholder="Enter content"></textarea>
+                                <p id="errcontent" class="mb-0 text-danger em"></p>
+                            </div>
+
+
                             {{-- ############################################################# --}}
 
                             {{-- ##########################(end bg)################################### --}}
