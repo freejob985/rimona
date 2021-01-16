@@ -228,7 +228,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 mb-4">
                                     <label for="service">service</label>
-                                    <input type="text" placeholder="Please enter data" class="form-control"
+                                    <input type="hidden" placeholder="Please enter data" class="form-control"
                                         name="service" id="service" placeholder="" value="{{$service->id}}">
                                     @if ($errors->has('service'))
                                     <div class="invalid-feedback">
