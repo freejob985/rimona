@@ -213,7 +213,7 @@
                             </div>
                             {{-- ############################################################# --}}
                             <div class="form-row">
-                                <select class="selectpicker col-12" name="Type" data-show-subtext="true">
+                                <select class="form-control" name="Type" data-show-subtext="true">
                                   <option>Logo</option>
                                   <option>Products</option>
                                   <option>Projects</option>
