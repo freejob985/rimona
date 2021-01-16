@@ -73,7 +73,7 @@
     <div class="form-row">
         <div class="col-md-12 mb-4">
             <input type="hidden" placeholder="Please enter data" class="form-control"
-                name="service" id="service" placeholder="" value="{{$service->id}}">
+                name="service" id="service" placeholder="" value="{{$service->service}}">
             @if ($errors->has('service'))
             <div class="invalid-feedback">
                 {{ $errors->first('service') }}
@@ -86,7 +86,7 @@
         <div class="col-md-12 mb-4">
             <label for="Title">Title</label>
             <input type="text" placeholder="Please enter data" class="form-control" name="Title"
-                id="Title" placeholder="" value="{{Request::old('Title')}}">
+                id="Title" placeholder="" value="{{ $service->Title }}">
             @if ($errors->has('Title'))
             <div class="invalid-feedback">
                 {{ $errors->first('Title') }}
@@ -170,23 +170,6 @@
             
             
          ">
-        </div>
-
-
-
-
-
-        <div class="form-group">
-            <label for="usr">Title:</label>
-            <input type="text" class="form-control" id="usr" name="Title" value="{{ $service->Title }}">
-        </div>
-
-
-
-
-        <div>
-            <input type=file name="File" id="file" >
-            <label for="file">Choose Images</label>
         </div>
         <br>
         <hr>
