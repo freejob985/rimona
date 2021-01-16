@@ -202,7 +202,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 mb-4">
                                     <label for="File">File</label>
-                                    <input type="text" placeholder="Please enter data" class="form-control" name="File"
+                                    <input type="file" placeholder="Please enter data" class="form-control" name="File"
                                         id="File" placeholder="" value="{{Request::old('File')}}">
                                     @if ($errors->has('File'))
                                     <div class="invalid-feedback">
@@ -213,17 +213,15 @@
                             </div>
                             {{-- ############################################################# --}}
                             <div class="form-row">
-                                <div class="col-md-12 mb-4">
-                                    <label for="Type">Type</label>
-                                    <input type="text" placeholder="Please enter data" class="form-control" name="Type"
-                                        id="Type" placeholder="" value="{{Request::old('Type')}}">
-                                    @if ($errors->has('Type'))
-                                    <div class="invalid-feedback">
-                                        {{ $errors->first('Type') }}
-                                    </div>
-                                    @endif
-                                </div>
-                            </div>
+                                <select class="selectpicker col-12" name="Type" data-show-subtext="true">
+                                  <option>Logo</option>
+                                  <option>Products</option>
+                                  <option>Projects</option>
+                                </select>
+                                @if ($errors->has('Type'))
+                                <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Type') }}</span>
+                                @endif
+                              </div>
                             {{-- ############################################################# --}}
                             <div class="form-row">
                                 <div class="col-md-12 mb-4">
