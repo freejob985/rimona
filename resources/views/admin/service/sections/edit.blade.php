@@ -96,7 +96,18 @@
     </div>
     {{-- ############################################################# --}}
 
-
+    <div class="form-row">
+        <div class="col-md-12 mb-4">
+            <label for="Title">id</label>
+            <input type="hidden" placeholder="Please enter data" class="form-control" name="id"
+                id="id" placeholder="" value="{{ $service->id }}">
+            @if ($errors->has('id'))
+            <div class="invalid-feedback">
+                {{ $errors->first('id') }}
+            </div>
+            @endif
+        </div>
+    </div>
 
 
 

@@ -292,6 +292,9 @@ class ServiceController extends Controller
             } else {
                 $filename = "";
             }
+
+
+            
             DB::table('sections')->insert([
                 'File' => $filename,
                 'Type' => $request->input('Type'),
