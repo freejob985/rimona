@@ -190,8 +190,8 @@ class ServiceController extends Controller
     {
 
 
+        dd($request->all());
 
-        
         if ($request->hasFile('File')) {
             //   dd("Catch errors for script and full tracking ( 3 )");
             foreach ($request->file('File') as $file) {
@@ -212,6 +212,67 @@ class ServiceController extends Controller
                     'Title' => $request->Title,
                 ]);
         }
+
+
+        if ($request->Type == "Logo") {
+            if ($request->hasFile('File')) {
+                $file = $request->File;
+                $extension = $file->getClientOriginalExtension();
+                $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
+                $file->move("assets/front/img/Logo/", $filename);
+
+            } else {
+
+                $filename = "";
+            }
+            DB::table('sections')->insert([
+                'File' => $filename,
+                'Type' => $request->input('Type'),
+                'service' => $request->input('service'),
+                'Title' => $request->input('Title'),
+                'paragraph' => $request->input('paragraph'),
+            ]);
+        } else if ($request->Type == "Products") {
+            if ($request->hasFile('File')) {
+                $file = $request->File;
+                $extension = $file->getClientOriginalExtension();
+                $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
+                $file->move("assets/front/img/Productsss/", $filename);
+
+            } else {
+
+                $filename = "";
+            }
+            DB::table('sections')->insert([
+                'File' => $filename,
+                'Type' => $request->input('Type'),
+                'service' => $request->input('service'),
+                'Title' => $request->input('Title'),
+                'paragraph' => $request->input('paragraph'),
+            ]);
+        } else if ($request->Type == "Projects") {
+            if ($request->hasFile('File')) {
+                $file = $request->File;
+                $extension = $file->getClientOriginalExtension();
+                $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
+                $file->move("assets/front/img/Projects/", $filename);
+
+            } else {
+
+                $filename = "";
+            }
+            DB::table('sections')->insert([
+                'File' => $filename,
+                'Type' => $request->input('Type'),
+                'service' => $request->input('service'),
+                'Title' => $request->input('Title'),
+                'paragraph' => $request->input('paragraph'),
+            ]);
+
+
+
+
+
         Session::flash('success', 'Service updated successfully!');
 
         return redirect()->back()->with('alert-success', 'The file has been uploaded');
