@@ -188,8 +188,6 @@ class ServiceController extends Controller
 
     public function update_sections(Request $request)
     {
-
-
         dd($request->all());
 
         if ($request->hasFile('File')) {
@@ -220,9 +218,7 @@ class ServiceController extends Controller
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Logo/", $filename);
-
             } else {
-
                 $filename = "";
             }
             DB::table('sections')->insert([
@@ -232,15 +228,13 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
-        } else if ($request->Type == "Products") {
+        } elseif ($request->Type == "Products") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Productsss/", $filename);
-
             } else {
-
                 $filename = "";
             }
             DB::table('sections')->insert([
@@ -250,15 +244,13 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
-        } else if ($request->Type == "Projects") {
+        } elseif ($request->Type == "Projects") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Projects/", $filename);
-
             } else {
-
                 $filename = "";
             }
             DB::table('sections')->insert([
@@ -273,10 +265,10 @@ class ServiceController extends Controller
 
 
 
-        Session::flash('success', 'Service updated successfully!');
+            Session::flash('success', 'Service updated successfully!');
 
-        return redirect()->back()->with('alert-success', 'The file has been uploaded');
-
+            return redirect()->back()->with('alert-success', 'The file has been uploaded');
+        }
     }
 
     public function upload_sec(Request $request)
@@ -297,9 +289,7 @@ class ServiceController extends Controller
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Logo/", $filename);
-
             } else {
-
                 $filename = "";
             }
             DB::table('sections')->insert([
@@ -309,15 +299,13 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
-        } else if ($request->Type == "Products") {
+        } elseif ($request->Type == "Products") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Productsss/", $filename);
-
             } else {
-
                 $filename = "";
             }
             DB::table('sections')->insert([
@@ -327,15 +315,13 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
-        } else if ($request->Type == "Projects") {
+        } elseif ($request->Type == "Projects") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Projects/", $filename);
-
             } else {
-
                 $filename = "";
             }
             DB::table('sections')->insert([
@@ -346,6 +332,7 @@ class ServiceController extends Controller
                 'paragraph' => $request->input('paragraph'),
             ]);
         }
+    
 
         return redirect()->back()->with('alert-success', 'The file has been uploaded');
 
