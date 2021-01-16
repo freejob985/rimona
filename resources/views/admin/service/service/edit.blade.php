@@ -198,6 +198,74 @@
                             @csrf
 
 
+                              {{-- ##########################(from bg)################################### --}}
+  <div class="form-row">
+    <div class="col-md-12 mb-4">
+      <label for="File">File</label>
+      <input type="text"  placeholder="Please enter data"   class="form-control"   name="File"  id="File" placeholder="" value="{{Request::old('File')}}" >
+      @if ($errors->has('File'))
+      <div class="invalid-feedback">
+        {{ $errors->first('File') }}
+      </div>
+      @endif
+    </div>
+  </div>
+{{-- ############################################################# --}}
+  <div class="form-row">
+    <div class="col-md-12 mb-4">
+      <label for="Type">Type</label>
+      <input type="text"  placeholder="Please enter data"   class="form-control"   name="Type"  id="Type" placeholder="" value="{{Request::old('Type')}}" >
+      @if ($errors->has('Type'))
+      <div class="invalid-feedback">
+        {{ $errors->first('Type') }}
+      </div>
+      @endif
+    </div>
+  </div>
+{{-- ############################################################# --}}
+  <div class="form-row">
+    <div class="col-md-12 mb-4">
+      <label for="service">service</label>
+      <input type="text"  placeholder="Please enter data"   class="form-control"   name="service"  id="service" placeholder="" value="{{Request::old('service')}}" >
+      @if ($errors->has('service'))
+      <div class="invalid-feedback">
+        {{ $errors->first('service') }}
+      </div>
+      @endif
+    </div>
+  </div>
+{{-- ############################################################# --}}
+  <div class="form-row">
+    <div class="col-md-12 mb-4">
+      <label for="Title">Title</label>
+      <input type="text"  placeholder="Please enter data"   class="form-control"   name="Title"  id="Title" placeholder="" value="{{Request::old('Title')}}" >
+      @if ($errors->has('Title'))
+      <div class="invalid-feedback">
+        {{ $errors->first('Title') }}
+      </div>
+      @endif
+    </div>
+  </div>
+{{-- ############################################################# --}}
+  <div class="form-row">
+    <div class="col-md-12 mb-4">
+      <label for="paragraph">paragraph</label>
+      <input type="text"  placeholder="Please enter data"   class="form-control"   name="paragraph"  id="paragraph" placeholder="" value="{{Request::old('paragraph')}}" >
+      @if ($errors->has('paragraph'))
+      <div class="invalid-feedback">
+        {{ $errors->first('paragraph') }}
+      </div>
+      @endif
+    </div>
+  </div>
+{{-- ############################################################# --}}
+
+  {{-- ##########################(end bg)################################### --}}
+  <input type="submit" style="background: #011a25;" class="btn btn-primary btn-large btn-block"
+    value="اضافة موضوع جديد" />
+
+
+    
 
 
                             <div class="custom-file-container" data-upload-id="myFirstImage">
@@ -213,27 +281,8 @@
 
 
 
-                              <div class="form-row">
-                                <select class="selectpicker col-12" name="Type" data-show-subtext="true">
-                                  <option>Arabic</option>
-                                  <option>English</option>
-                                </select>
-                                @if ($errors->has('Type'))
-                                <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Type') }}</span>
-                                @endif
-                              </div>
+                 
 
-                              <div class="form-row">
-                                <div class="col-md-12 mb-4">
-                                  <label for="service'">service'</label>
-                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="service"  id="service" placeholder="" value="{{Request::old('service')}}" >
-                                  @if ($errors->has('service'))
-                                  <div class="invalid-feedback">
-                                    {{ $errors->first('service'') }}
-                                  </div>
-                                  @endif
-                                </div>
-                              </div>
 
                               <div class="form-row">
                                 <div class="col-md-12 mb-4">
@@ -306,10 +355,7 @@
 
                         <br>
                         <hr>
-                        @if(session()->has('alert-success'))
-                        <input type="submit" style="background: #011a25;background: #20a049;padding: 1%;font-size: 16px;"
-                          class="btn btn-success save btn-large btn-block" value="  {{ session()->get('alert-success') }}" />
-                        @endif
+                  
                     </div>
                 </div>
             </div>
