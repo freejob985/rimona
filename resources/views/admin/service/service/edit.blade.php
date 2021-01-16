@@ -199,6 +199,68 @@
 
 
 
+
+                            <div class="custom-file-container" data-upload-id="myFirstImage">
+                                <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear"
+                                    title="Clear Image">x</a></label>
+                                <label class="custom-file-container__custom-file">
+                                  <input type="file"  name="File"  class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+                                  <input type="hidden" value="10485760" />
+                                  <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                </label>
+                                <div class="custom-file-container__image-preview"></div>
+                              </div>
+
+
+
+                              <div class="form-row">
+                                <select class="selectpicker col-12" name="Type" data-show-subtext="true">
+                                  <option>Arabic</option>
+                                  <option>English</option>
+                                </select>
+                                @if ($errors->has('Type'))
+                                <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Type') }}</span>
+                                @endif
+                              </div>
+
+                              <div class="form-row">
+                                <div class="col-md-12 mb-4">
+                                  <label for="service'">service'</label>
+                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="service'"  id="service'" placeholder="" value="{{Request::old('service'')}}" >
+                                  @if ($errors->has('service''))
+                                  <div class="invalid-feedback">
+                                    {{ $errors->first('service'') }}
+                                  </div>
+                                  @endif
+                                </div>
+                              </div>
+
+                              <div class="form-row">
+                                <div class="col-md-12 mb-4">
+                                  <label for="Title'">Title'</label>
+                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="Title'"  id="Title'" placeholder="" value="{{Request::old('Title'')}}" >
+                                  @if ($errors->has('Title''))
+                                  <div class="invalid-feedback">
+                                    {{ $errors->first('Title'') }}
+                                  </div>
+                                  @endif
+                                </div>
+                              </div>
+
+
+                              <div class="form-row">
+                                <div class="col-md-12 mb-4">
+                                  <label for="paragraph'">paragraph'</label>
+                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="paragraph'"  id="paragraph'" placeholder="" value="{{Request::old('paragraph'')}}" >
+                                  @if ($errors->has('paragraph''))
+                                  <div class="invalid-feedback">
+                                    {{ $errors->first('paragraph'') }}
+                                  </div>
+                                  @endif
+                                </div>
+                              </div>
+
+
                             <div class="form-group">
                                 <label for="">Serial Number **</label>
                                 <input type="hidden" class="form-control ltr" name="id" value="{{$service->id}}"
