@@ -222,6 +222,8 @@ class ServiceController extends Controller
 
     public function upload_sec(Request $request)
     {
+
+        dd($request->all());
         $files = $request->file('Logo');
         //  dd("Catch errors for script and full tracking ( 2 )");
         if ($request->hasFile('Logo')) {
