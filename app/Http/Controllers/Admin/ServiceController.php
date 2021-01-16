@@ -30,13 +30,9 @@ class ServiceController extends Controller
 
     public function index_sections(Request $request)
     {
-        $lang = Language::where('code', $request->language)->first();
-
-        $lang_id = $lang->id;
+        
         $data['services'] = DB::table('sections')->orderBy('id', 'DESC')->paginate(10);
 
-        $data['lang_id'] = $lang_id;
-        $data['abe'] = BasicExtended::where('language_id', $lang_id)->first();
 
         return view('admin.service.sections.index', $data);
     }
