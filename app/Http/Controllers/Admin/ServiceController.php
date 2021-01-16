@@ -189,6 +189,9 @@ class ServiceController extends Controller
     public function update_sections(Request $request)
     {
 
+
+
+        
         if ($request->hasFile('File')) {
             //   dd("Catch errors for script and full tracking ( 3 )");
             foreach ($request->file('File') as $file) {

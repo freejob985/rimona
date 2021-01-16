@@ -105,7 +105,7 @@
     <div class="form-group" id="contentFg">
         <label for="">Content **</label>
         <textarea class="form-control summernote" name="paragraph" data-height="300"
-            placeholder="Enter content">    {{ $sections->paragraph}}</textarea>
+            placeholder="Enter content">    {{ $service->paragraph}}</textarea>
         <p id="errcontent" class="mb-0 text-danger em"></p>
     </div>
 
