@@ -763,12 +763,8 @@
                     <span class="sub-item">Portfolio Section</span>
                   </a>
                 </li>
-sss
-                <li class="@if(request()->path() == 'admin/portfoliosection') active @endif">
-                  <a href="{{route('admin.portfoliosection.index') . '?language=' . $default->code}}">
-                    <span class="sub-item">Portfolio Section</span>
-                  </a>
-                </li>
+
+                
                 <li class="
                 @if(request()->path() == 'admin/testimonials') active
                 @elseif(request()->is('admin/testimonial/*/edit')) active
