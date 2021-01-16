@@ -30,9 +30,8 @@ class ServiceController extends Controller
 
     public function index_sections(Request $request)
     {
-        
-        $data['services'] = DB::table('sections')->orderBy('id', 'DESC')->paginate(10);
 
+        $data['services'] = DB::table('sections')->orderBy('id', 'DESC')->paginate(10);
 
         return view('admin.service.sections.index', $data);
     }
@@ -211,7 +210,6 @@ class ServiceController extends Controller
                 ]);
         }
 
-
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
@@ -260,10 +258,6 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
-
-
-
-
 
             Session::flash('success', 'Service updated successfully!');
 
@@ -273,15 +267,6 @@ class ServiceController extends Controller
 
     public function upload_sec(Request $request)
     {
-        //     array:6 [▼
-        //     "_token" => "pYyq5apEElAJKx5qZmrRTu9gneISNcKbyxsxtPdk"
-        //     "Type" => "Products"
-        //     "service" => "297"
-        //     "Title" => "111111111111"
-        //     "paragraph" => "<p>ششششششششششششششششششششششششش</p>"
-        //     "File" => Illuminate\Http\UploadedFile {#1887 ▶}
-        //   ]
-         dd($request->all());
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
@@ -293,15 +278,18 @@ class ServiceController extends Controller
                 $filename = "";
             }
 
+        
 
-            
-            DB::table('sections')->insert([
-                'File' => $filename,
-                'Type' => $request->input('Type'),
-                'service' => $request->input('service'),
-                'Title' => $request->input('Title'),
-                'paragraph' => $request->input('paragraph'),
-            ]);
+            DB::table('sections')
+                ->where('id', $request->input('id'))
+                ->update([
+                    'File' => $filename,
+                    'Type' => $request->input('Type'),
+                    'service' => $request->input('service'),
+                    'Title' => $request->input('Title'),
+                    'paragraph' => $request->input('paragraph'),
+                ]);
+
         } elseif ($request->Type == "Products") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
@@ -311,7 +299,9 @@ class ServiceController extends Controller
             } else {
                 $filename = "";
             }
-            DB::table('sections')->insert([
+            DB::table('sections')
+            ->where('id', $request->input('id'))
+            ->update([
                 'File' => $filename,
                 'Type' => $request->input('Type'),
                 'service' => $request->input('service'),
@@ -327,7 +317,9 @@ class ServiceController extends Controller
             } else {
                 $filename = "";
             }
-            DB::table('sections')->insert([
+            DB::table('sections')
+            ->where('id', $request->input('id'))
+            ->update([
                 'File' => $filename,
                 'Type' => $request->input('Type'),
                 'service' => $request->input('service'),
@@ -335,7 +327,6 @@ class ServiceController extends Controller
                 'paragraph' => $request->input('paragraph'),
             ]);
         }
-    
 
         return redirect()->back()->with('alert-success', 'The file has been uploaded');
 
