@@ -233,7 +233,7 @@ class ServiceController extends Controller
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
-                $file = $request->file;
+                $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Logo/", $filename);
@@ -251,7 +251,7 @@ class ServiceController extends Controller
             ]);
         } else if ($request->Type == "Products") {
             if ($request->hasFile('File')) {
-                $file = $request->file;
+                $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Productsss/", $filename);
@@ -269,7 +269,7 @@ class ServiceController extends Controller
             ]);
         } else if ($request->Type == "Projects") {
             if ($request->hasFile('File')) {
-                $file = $request->file;
+                $file = $request->File;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Projects/", $filename);
