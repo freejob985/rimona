@@ -61,9 +61,9 @@
     {{-- ############################################################# --}}
     <div class="form-row">
         <select class="form-control" name="Type" data-show-subtext="true">
-          <option>Logo</option>
-          <option>Products</option>
-          <option>Projects</option>
+          <option {{ ( $service->Type == 'Logo') ? 'selected' : '' }}>Logo</option>
+          <option {{ ( $service->Type == 'Products') ? 'selected' : '' }}>Products</option>
+          <option {{ ( $service->Type == 'Projects') ? 'selected' : '' }}>Projects</option>
         </select>
         @if ($errors->has('Type'))
         <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Type') }}</span>
@@ -97,10 +97,15 @@
     {{-- ############################################################# --}}
 
 
+
+
+
+
+    
     <div class="form-group" id="contentFg">
         <label for="">Content **</label>
         <textarea class="form-control summernote" name="paragraph" data-height="300"
-            placeholder="Enter content"></textarea>
+            placeholder="Enter content">    {{ $sections->paragraph}}</textarea>
         <p id="errcontent" class="mb-0 text-danger em"></p>
     </div>
 
