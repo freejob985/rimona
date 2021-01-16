@@ -221,17 +221,15 @@ class ServiceController extends Controller
 
     public function upload_sec(Request $request)
     {
-    //     array:6 [▼
-    //     "_token" => "pYyq5apEElAJKx5qZmrRTu9gneISNcKbyxsxtPdk"
-    //     "Type" => "Products"
-    //     "service" => "297"
-    //     "Title" => "111111111111"
-    //     "paragraph" => "<p>ششششششششششششششششششششششششش</p>"
-    //     "File" => Illuminate\Http\UploadedFile {#1887 ▶}
-    //   ]
-       // dd($request->all());
-
-      
+        //     array:6 [▼
+        //     "_token" => "pYyq5apEElAJKx5qZmrRTu9gneISNcKbyxsxtPdk"
+        //     "Type" => "Products"
+        //     "service" => "297"
+        //     "Title" => "111111111111"
+        //     "paragraph" => "<p>ششششششششششششششششششششششششش</p>"
+        //     "File" => Illuminate\Http\UploadedFile {#1887 ▶}
+        //   ]
+        // dd($request->all());
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('file')) {
@@ -239,45 +237,55 @@ class ServiceController extends Controller
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Logo/", $filename);
-    
+
             } else {
-    
+
                 $filename = "";
             }
+            DB::table('sections')->insert([
+                'File' => $filename,
+                'Type' => $request->input('Type'),
+                'service' => $request->input('service'),
+                'Title' => $request->input('Title'),
+                'paragraph' => $request->input('paragraph'),
+            ]);
         } else if ($request->Type == "Products") {
             if ($request->hasFile('file')) {
                 $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Productsss/", $filename);
-    
+
             } else {
-    
+
                 $filename = "";
             }
+            DB::table('sections')->insert([
+                'File' => $filename,
+                'Type' => $request->input('Type'),
+                'service' => $request->input('service'),
+                'Title' => $request->input('Title'),
+                'paragraph' => $request->input('paragraph'),
+            ]);
         } else if ($request->Type == "Projects") {
             if ($request->hasFile('file')) {
                 $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
                 $file->move("assets/front/img/Projects/", $filename);
-    
+
             } else {
-    
+
                 $filename = "";
             }
+            DB::table('sections')->insert([
+                'File' => $filename,
+                'Type' => $request->input('Type'),
+                'service' => $request->input('service'),
+                'Title' => $request->input('Title'),
+                'paragraph' => $request->input('paragraph'),
+            ]);
         }
-
-       
-        DB::table('sections')->insert([
-            'File' => $filename,
-            'Type' => $request->input('Type'),
-            'service' => $request->input('service'),
-            'Title' => $request->input('Title'),
-            'paragraph' => $request->input('paragraph'),
-                    ]);
-       
-        
 
         return redirect()->back()->with('alert-success', 'The file has been uploaded');
 
