@@ -238,7 +238,7 @@
                               <div class="form-row">
                                 <div class="col-md-12 mb-4">
                                   <label for="Title'">Title'</label>
-                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="Title'"  id="Title'" placeholder="" value="{{Request::old('Title'')}}" >
+                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="Title'"  id="Title'" placeholder="" value="{{Request::old('Title')}}" >
                                   @if ($errors->has('Title''))
                                   <div class="invalid-feedback">
                                     {{ $errors->first('Title'') }}
@@ -251,7 +251,7 @@
                               <div class="form-row">
                                 <div class="col-md-12 mb-4">
                                   <label for="paragraph'">paragraph'</label>
-                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="paragraph'"  id="paragraph'" placeholder="" value="{{Request::old('paragraph'')}}" >
+                                  <input type="text"  placeholder="Please enter data"   class="form-control"   name="paragraph'"  id="paragraph'" placeholder="" value="{{Request::old('paragraph')}}" >
                                   @if ($errors->has('paragraph''))
                                   <div class="invalid-feedback">
                                     {{ $errors->first('paragraph'') }}
