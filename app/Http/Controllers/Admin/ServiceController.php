@@ -232,7 +232,7 @@ class ServiceController extends Controller
         // dd($request->all());
 
         if ($request->Type == "Logo") {
-            if ($request->hasFile('file')) {
+            if ($request->hasFile('File')) {
                 $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
@@ -250,7 +250,7 @@ class ServiceController extends Controller
                 'paragraph' => $request->input('paragraph'),
             ]);
         } else if ($request->Type == "Products") {
-            if ($request->hasFile('file')) {
+            if ($request->hasFile('File')) {
                 $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
@@ -268,7 +268,7 @@ class ServiceController extends Controller
                 'paragraph' => $request->input('paragraph'),
             ]);
         } else if ($request->Type == "Projects") {
-            if ($request->hasFile('file')) {
+            if ($request->hasFile('File')) {
                 $file = $request->file;
                 $extension = $file->getClientOriginalExtension();
                 $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
