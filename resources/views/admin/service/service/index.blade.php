@@ -62,7 +62,7 @@ $selLang = \App\Language::where('code', request()->input('language'))->first();
                   @endif
                </div>
                <div class="col-lg-4 offset-lg-1 mt-2 mt-lg-0">
-                  <a href="#" class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#createModal"><i class="fas fa-plus"></i> Add Service</a>
+                  <a href="#" class="btn btn-primary float-right btn-sm" data-toggle="modal" ><i class="fas fa-plus"></i> Add Service</a>
                   &nbsp;&nbsp;&nbsp;
                   <a style="
                   margin-right: 1%;
