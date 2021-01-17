@@ -270,7 +270,7 @@ class ServiceController extends Controller
 
 
 
-
+        dd($request->all());
 
 
 

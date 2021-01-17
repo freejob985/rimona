@@ -162,6 +162,13 @@
 
 
     <hr>
+    @if(session()->has('alert-success'))
+    <input type="submit"
+        style="background: #011a25;background: #20a049;padding: 1%;font-size: 16px;"
+        class="btn btn-success save btn-large btn-block"
+        value="  {{ session()->get('alert-success') }}" />
+    @endif
+
     <br>
 
     <button type="submit" class="btn btn-success  btn-block">Update </button>
