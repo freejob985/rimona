@@ -206,6 +206,8 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
+            return redirect()->back()->with('alert-success', 'The file has been uploaded');
+
         } elseif ($request->Type == "Products") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
@@ -222,6 +224,8 @@ class ServiceController extends Controller
                 'Title' => $request->input('Title'),
                 'paragraph' => $request->input('paragraph'),
             ]);
+            return redirect()->back()->with('alert-success', 'The file has been uploaded');
+
         } elseif ($request->Type == "Projects") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
@@ -240,8 +244,8 @@ class ServiceController extends Controller
             ]);
 
            // Session::flash('success', 'Service updated successfully!');
+           return redirect()->back()->with('alert-success', 'The file has been uploaded');
 
-            return redirect()->back()->with('alert-success', 'The file has been uploaded');
         }
     }
 
