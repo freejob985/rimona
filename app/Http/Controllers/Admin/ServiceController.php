@@ -188,7 +188,7 @@ class ServiceController extends Controller
     public function update_sections (Request $request)
     {
         //     dd($request->all());
-        dd("الاضافة");
+       // dd("الاضافة");
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
