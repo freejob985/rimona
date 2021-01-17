@@ -268,7 +268,7 @@ class ServiceController extends Controller
     public function upload_sec(Request $request)
     {
 
-  dd($request->all());
+
 
 
 
