@@ -188,7 +188,7 @@ class ServiceController extends Controller
     public function upload_sec (Request $request)
     {
         //     dd($request->all());
-
+        dd("الاضافة");
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
@@ -249,7 +249,7 @@ class ServiceController extends Controller
     {
 
         //  dd($request->all());
-
+        dd("التحديث");
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
