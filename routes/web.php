@@ -538,7 +538,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin', 'checkstatus']
     Route::post('/service/upload', 'Admin\ServiceController@upload')->name('admin.service.upload');
 
 
-    Route::post('/upload_sec/upload', 'Admin\ServiceController@upload_sec')->name('admin.service.uploadUpdatess');
+    Route::post('/upload_sec/upload', 'Admin\ServiceController@update_sections')->name('admin.service.uploadUpdatess');
 
     
     Route::post('/service/{id}/uploadUpdate', 'Admin\ServiceController@uploadUpdate')->name('admin.service.uploadUpdate');
@@ -551,7 +551,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin', 'checkstatus']
     Route::post('/service/feature', 'Admin\ServiceController@feature')->name('admin.service.feature');
     Route::post('/sections/delete', 'Admin\ServiceController@delete_sections')->name('admin.sections.delete');
     Route::get('/sections/{id}/edit', 'Admin\ServiceController@edit_sections')->name('admin.sections.edit');
-    Route::post('/sections/update', 'Admin\ServiceController@update_sections')->name('admin.sections.update');
+    Route::post('/sections/update', 'Admin\ServiceController@upload_sec')->name('admin.sections.update');
   });
 
 
