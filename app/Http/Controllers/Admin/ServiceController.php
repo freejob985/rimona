@@ -249,7 +249,7 @@ class ServiceController extends Controller
     {
 
         //  dd($request->all());
-        dd("التحديث");
+       // dd("التحديث");
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
