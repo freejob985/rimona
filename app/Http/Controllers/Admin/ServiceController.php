@@ -185,7 +185,7 @@ class ServiceController extends Controller
         return "success";
     }
 
-    public function update_sections(Request $request)
+    public function upload_sec (Request $request)
     {
         //     dd($request->all());
 
@@ -239,13 +239,13 @@ class ServiceController extends Controller
                 'paragraph' => $request->input('paragraph'),
             ]);
 
-            Session::flash('success', 'Service updated successfully!');
+           // Session::flash('success', 'Service updated successfully!');
 
             return redirect()->back()->with('alert-success', 'The file has been uploaded');
         }
     }
 
-    public function upload_sec(Request $request)
+    public function update_sections(Request $request)
     {
 
         //  dd($request->all());
