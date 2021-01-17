@@ -187,7 +187,7 @@ class ServiceController extends Controller
 
     public function update_sections(Request $request)
     {
-   //     dd($request->all());
+        //     dd($request->all());
 
         if ($request->hasFile('File')) {
             //   dd("Catch errors for script and full tracking ( 3 )");
@@ -268,13 +268,7 @@ class ServiceController extends Controller
     public function upload_sec(Request $request)
     {
 
-
-
-        dd($request->all());
-
-
-
-
+      //  dd($request->all());
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
@@ -286,19 +280,16 @@ class ServiceController extends Controller
                 $filename = "";
             }
 
-        
-
-            DB::table('sections')->insert([
-                'File' => $filename,
-                'Type' => $request->input('Type'),
-                'service' => $request->input('service'),
-                'Title' => $request->input('Title'),
-                'paragraph' => $request->input('paragraph'),
-            ]);
+            DB::table('sections')
+                ->where('id', $request->input('id'))
+                ->update(['File' => $filename, 
+                'Type' => $request->input('Type'), 
+                'service' => $request->input('service'), 
+                'Title' => $request->input('Title'), 
+                'paragraph' => $request->input('paragraph')]);
 
 
-
-
+    
 
         } elseif ($request->Type == "Products") {
             if ($request->hasFile('File')) {
@@ -309,13 +300,14 @@ class ServiceController extends Controller
             } else {
                 $filename = "";
             }
-            DB::table('sections')->insert([
-                'File' => $filename,
-                'Type' => $request->input('Type'),
-                'service' => $request->input('service'),
-                'Title' => $request->input('Title'),
-                'paragraph' => $request->input('paragraph'),
-            ]);
+            DB::table('sections')
+            ->where('id', $request->input('id'))
+            ->update(['File' => $filename, 
+            'Type' => $request->input('Type'), 
+            'service' => $request->input('service'), 
+            'Title' => $request->input('Title'), 
+            'paragraph' => $request->input('paragraph')]);
+
         } elseif ($request->Type == "Projects") {
             if ($request->hasFile('File')) {
                 $file = $request->File;
@@ -325,13 +317,13 @@ class ServiceController extends Controller
             } else {
                 $filename = "";
             }
-            DB::table('sections')->insert([
-                'File' => $filename,
-                'Type' => $request->input('Type'),
-                'service' => $request->input('service'),
-                'Title' => $request->input('Title'),
-                'paragraph' => $request->input('paragraph'),
-            ]);
+                DB::table('sections')
+                ->where('id', $request->input('id'))
+                ->update(['File' => $filename, 
+                'Type' => $request->input('Type'), 
+                'service' => $request->input('service'), 
+                'Title' => $request->input('Title'), 
+                'paragraph' => $request->input('paragraph')]);
         }
 
         return redirect()->back()->with('alert-success', 'The file has been Add');
