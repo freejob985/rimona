@@ -334,7 +334,7 @@ class ServiceController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('alert-success', 'The file has been uploaded');
+        return redirect()->back()->with('alert-success', 'The file has been Add');
 
     }
 

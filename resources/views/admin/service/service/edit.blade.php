@@ -190,8 +190,8 @@
 
 
                         </form>
-<hr>
-<hr>
+                        <hr>
+                        <hr>
 
                         <form method="POST" enctype="multipart/form-data"
                             action="{{ route('admin.service.uploadUpdatess') }}">
@@ -214,14 +214,15 @@
                             {{-- ############################################################# --}}
                             <div class="form-row">
                                 <select class="form-control" name="Type" data-show-subtext="true">
-                                  <option>Logo</option>
-                                  <option>Products</option>
-                                  <option>Projects</option>
+                                    <option>Logo</option>
+                                    <option>Products</option>
+                                    <option>Projects</option>
                                 </select>
                                 @if ($errors->has('Type'))
-                                <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Type') }}</span>
+                                <span class="helper-text" data-error="wrong"
+                                    data-success="right">{{ $errors->first('Type') }}</span>
                                 @endif
-                              </div>
+                            </div>
                             {{-- ############################################################# --}}
                             <div class="form-row">
                                 <div class="col-md-12 mb-4">
@@ -248,7 +249,7 @@
                                 </div>
                             </div>
                             {{-- ############################################################# --}}
-                        
+
 
                             <div class="form-group" id="contentFg">
                                 <label for="">Content **</label>
@@ -269,6 +270,19 @@
 
 
                             <hr>
+                            @if(session()->has('alert-success'))
+                            <input type="submit"
+                                style="background: #011a25;background: #20a049;padding: 1%;font-size: 16px;"
+                                class="btn btn-success save btn-large btn-block"
+                                value="  {{ session()->get('alert-success') }}" />
+                            @endif
+                            // return redirect()->back()->with('alert-success', 'تم التعديل بنجاح');
+
+
+
+
+
+
                             <br>
 
                             <button type="submit" class="btn btn-success  btn-block">Update </button>
