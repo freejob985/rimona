@@ -43,7 +43,7 @@
 <div class="row">
 
     <form method="POST" enctype="multipart/form-data"
-    action="{{ route('admin.service.uploadUpdatess') }}">
+    action="{{ route('admin.sections.update') }}">
     @csrf
     {{-- ##########################(from bg)################################### --}}
     <div class="form-row">
