@@ -189,26 +189,6 @@ class ServiceController extends Controller
     {
         //     dd($request->all());
 
-        if ($request->hasFile('File')) {
-            //   dd("Catch errors for script and full tracking ( 3 )");
-            foreach ($request->file('File') as $file) {
-                //   dd("Catch errors for script and full tracking ( 4 )");
-                $extension = $file->getClientOriginalExtension();
-                $filename = rand(111, 99999) . '.' . $extension;
-                $file->move($request->Path_full, $filename);
-                DB::table('sections')
-                    ->where('id', $request->id)
-                    ->update(['File' => $filename,
-                        'Title' => $request->Title,
-                    ]);
-            }
-        } else {
-            DB::table('sections')
-                ->where('id', $request->id)
-                ->update([
-                    'Title' => $request->Title,
-                ]);
-        }
 
         if ($request->Type == "Logo") {
             if ($request->hasFile('File')) {
