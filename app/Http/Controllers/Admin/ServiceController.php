@@ -185,7 +185,7 @@ class ServiceController extends Controller
         return "success";
     }
 
-    public function upload_sec (Request $request)
+    public function update_sections (Request $request)
     {
         //     dd($request->all());
         dd("الاضافة");
@@ -245,7 +245,7 @@ class ServiceController extends Controller
         }
     }
 
-    public function update_sections(Request $request)
+    public function upload_sec (Request $request)
     {
 
         //  dd($request->all());
