@@ -276,7 +276,6 @@
                                 class="btn btn-success save btn-large btn-block"
                                 value="  {{ session()->get('alert-success') }}" />
                             @endif
-                            // return redirect()->back()->with('alert-success', 'تم التعديل بنجاح');
 
 
 
