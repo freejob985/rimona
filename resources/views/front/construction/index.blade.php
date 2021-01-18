@@ -22,7 +22,7 @@
     <!--   hero area end    -->
 
     <!-- Start finlance_feature section -->
-    @if ($bs->feature_section == 1)
+
     <section class="finlance_feature feature_v1">
         <div class="container-fluid">
             <div class="row no-gutters">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </section>
-    @endif
+
     <!-- End finlance_feature area -->
 
     <!-- Start finlance_about section -->
