@@ -426,7 +426,7 @@
     <!-- End finlance_blog section -->
 
     <!-- Start finlance_partner section -->
-    @if ($bs->partner_section == 1)
+
     <section class="finlance_partner partner_v1 pt-125 pb-125">
         <div class="container">
             <div class="partner_slide">
@@ -438,11 +438,11 @@
             </div>
         </div>
     </section>
-    @endif
+    
     <!-- End finlance_partner section -->
 
     <!-- Start finlance_cta section -->
-
+    @if ($bs->call_to_action_section == 1)
     <section class="finlance_cta cta_v1 main_bg pt-70 pb-70">
         <div class="container">
             <div class="row align-items-center">
@@ -459,7 +459,7 @@
             </div>
         </div>
     </section>
-   
+    @endif
     <!-- End finlance_cta section -->
 
 @endsection
