@@ -442,7 +442,7 @@
     <!-- End finlance_partner section -->
 
     <!-- Start finlance_cta section -->
-    @if ($bs->call_to_action_section == 1)
+
     <section class="finlance_cta cta_v1 main_bg pt-70 pb-70">
         <div class="container">
             <div class="row align-items-center">
@@ -459,7 +459,7 @@
             </div>
         </div>
     </section>
-    @endif
+   
     <!-- End finlance_cta section -->
 
 @endsection
