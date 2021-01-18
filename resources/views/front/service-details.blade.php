@@ -6,7 +6,55 @@
 
 @section('meta-keywords', "$service->meta_keywords")
 @section('meta-description', "$service->meta_description")
+<style>
+  @media screen and (min-width: 768px)
+.carousel-caption {
+    right: 25%;
+    left: 25%;
+  
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    height: 200px!important;
+}
+.carousel-caption {
+   color: #403f3f;
+    text-align: center;
+    text-shadow: unset;
+}
+.carousel {
+    position: relative;
+    padding-top: 120px;
+}
 
+@media screen and (min-width: 768px)
+.carousel-caption {
+    right: 25%;
+    left: 25%;
+    padding-bottom: 30px;
+}
+.carousel-caption {
+   color: #403f3f;
+    text-align: center;
+    text-shadow: unset;
+}
+
+
+@media screen and (min-width: 768px)
+.carousel-caption {
+    right: 25%;
+    left: 25%;
+    padding-bottom: 30px;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+     height: 490px!important;
+}
+.carousel-caption {
+   color: #403f3f;
+    text-align: center;
+    text-shadow: unset;
+}
+
+</style>
 @section('content')
 <!--   breadcrumb area start   -->
 <div class="breadcrumb-area"
