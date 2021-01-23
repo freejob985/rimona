@@ -226,9 +226,15 @@
               <div class="grid_item">
                       <div class="grid_inner_item">
                           <div class="finlance_img">
+                            @if(!empty($partner->File))
                               <img src="{{asset('assets/front/img/Productsss/'.$partner->File)}}" class="img-fluid" alt="">
+                              @endif
+                              @if(!empty($partner->Title))
                               <h3>{{ $partner->Title }}</h3>
+                              @endif
+                              @if(!empty($partner->paragraph))
                               <p>{!! $partner->paragraph !!}</p>
+                              @endif
                               <div class="overlay_content">
                                   <div class="social_box">
                       
