@@ -227,6 +227,8 @@
                       <div class="grid_inner_item">
                           <div class="finlance_img">
                               <img src="{{asset('assets/front/img/Productsss/'.$partner->File)}}" class="img-fluid" alt="">
+                              <h3>{{ $servicess->Title }}</h3>
+                              <p>{!! $servicess->paragraph !!}</p>
                               <div class="overlay_content">
                                   <div class="social_box">
                       
