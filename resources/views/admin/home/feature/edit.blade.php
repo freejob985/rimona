@@ -100,7 +100,7 @@
                   </div>
 
                   <div class="form-group">
-                    <textarea  placeholder="Please enter data  Title" name="Title"   style="resize: none;font-size: 18px;font-weight: 600;color: white !important;background: #0e1726;"class="form-control" rows="5" id="comment">{{$feature->serial_number}}</textarea>
+                    <textarea  placeholder="Please enter data  Title" name="Title"   style="resize: none;font-size: 18px;font-weight: 600;color: white !important;background: #0e1726;"class="form-control" rows="5" id="comment">{{$feature->explanation}}</textarea>
                     @if ($errors->has('explanation'))
                     <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Title') }}</span>
                     @endif
