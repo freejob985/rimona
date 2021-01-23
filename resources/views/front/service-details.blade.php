@@ -204,83 +204,45 @@
 
 
 
-@if (count(DB::table('sections')->orderBy('id','desc')->where('service',$service->id)->limit(12)->where('Type',"Products")->get())>0)
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  @if (count(DB::table('sections')->orderBy('id','desc')->where('service',$service->id)->where('Type',"Products")->get())>0)
 
 
-<div class="container">
-    <h2 style="text-align: initial;font-weight:bold;color:red;"> منتجاتنا</h2>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-  @php
-      $as=1;
-      $ac=0
-  @endphp
-        @foreach (DB::table('sections')->orderBy('id','desc')->where('service',$service->id)->where('Type',"Products")->get() as $key => $servicess)
-
-        <li data-target="#myCarousel" data-slide-to="{{ $as++ }}"></li>
-        @endforeach
-      </ol>
-  
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-
-        @foreach (DB::table('sections')->orderBy('id','desc')->where('service',$service->id)->where('Type',"Products")->get() as $key => $servicess)
-        @php
-        $ac++;
-        if($ac==1){
-         $active="active";
-        }else{
-            $active="";
-        }
-    @endphp
-        <div class="item {{ $active }}">
-            
-          <img src="{{asset('assets/front/img/Productsss/' . $servicess->File)}}" alt="Los Angeles" style="width:100%;">
-          <div class="carousel-caption">
-            <h3>{{ $servicess->Title }}</h3>
-            <p>{!! $servicess->paragraph !!}</p>
+  <section class="finlance_team team_v1 gray_bg pt-100 pb-75">
+      <div class="container">
+          <h3 style="text-align: initial;font-weight:bold;color:red;">منتجاتنا</h3>
+          <div class="row align-items-center">
+              <div class="col-lg-8">
+                  <div class="section_title">
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <div class="button_box">
+                  </div>
+              </div>
           </div>
-        </div>
-        @endforeach
+          <div class="team_slide team-slick text-center" >
+              @foreach (DB::table('sections')->orderBy('id','desc')->where('service',$service->id)->where('Type',"Products")->limit(12)->get() as $key => $partner)
+              <div class="grid_item">
+                      <div class="grid_inner_item">
+                          <div class="finlance_img">
+                              <img src="{{asset('assets/front/img/Productsss/'.$partner->File)}}" class="img-fluid" alt="">
+                              <div class="overlay_content">
+                                  <div class="social_box">
+                      
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="finlance_content text-center">
+                          </div>
+                      </div>
+                  </div>
+              @endforeach
+          </div>
+      </div>
+  </section>
   
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-<hr>
-<br>
   @endif
-
 
 
 
