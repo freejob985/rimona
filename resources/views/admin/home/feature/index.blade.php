@@ -163,6 +163,16 @@
               <p id="errserial_number" class="mb-0 text-danger em"></p>
               <p class="text-warning"><small>The higher the serial number is, the later the feature will be shown.</small></p>
             </div>
+
+
+            <div class="form-group">
+              <textarea  placeholder="Please enter data  Title" name="Title"   style="resize: none;font-size: 18px;font-weight: 600;color: white !important;background: #0e1726;"class="form-control" rows="5" id="comment"></textarea>
+              @if ($errors->has('explanation'))
+              <span class="helper-text" data-error="wrong" data-success="right">{{ $errors->first('Title') }}</span>
+              @endif
+            </div>
+
+            
           </form>
         </div>
         <div class="modal-footer">
