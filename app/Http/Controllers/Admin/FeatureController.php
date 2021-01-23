@@ -78,7 +78,7 @@ class FeatureController extends Controller
 
     public function update(Request $request)
     {
-        dd($request->all());
+       
         $rules = [
             'icon' => 'required',
             'title' => 'required|max:50',
