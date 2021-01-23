@@ -69,6 +69,7 @@ class FeatureController extends Controller
         }
 
         $feature->serial_number = $request->serial_number;
+        $feature->explanation = $request->explanation;
         $feature->save();
 
         Session::flash('success', 'Feature added successfully!');
@@ -100,6 +101,7 @@ class FeatureController extends Controller
         }
 
         $feature->serial_number = $request->serial_number;
+        $feature->explanation = $request->explanation;
         $feature->save();
 
         Session::flash('success', 'Feature updated successfully!');
