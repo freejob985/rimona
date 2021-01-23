@@ -35,7 +35,6 @@
                                 </div>
                                 <div class="finlance_content">
                                     <h4>{{convertUtf8($feature->title)}}</h4>
-                                    <p>{{convertUtf8($feature->explanation)}}</p>
                                 </div>
                             </div>
                         </div>
@@ -64,8 +63,8 @@
                 </div>
                 <div class="col-lg-2 col-xs-12">
 <p style="color:#fff;text-align:center;">حمل تطبيق صاعد الأن</p>   
-<a href"https://apps.apple.com/ca/app/%D8%B5%D8%A7%D8%B9%D8%AF/id1348496015"><img src="http://gce.rimona.net/assets/front/img/app.png"  style="padding:22px;width:220px;" /></a>
-<a href"https://play.google.com/store/apps/details?id=com.saeed"><img src="http://gce.rimona.net/assets/front/img/google.png"  style="padding:22px;width:220px;" /></a>
+<a href="https://apps.apple.com/ca/app/%D8%B5%D8%A7%D8%B9%D8%AF/id1348496015"><img src="http://gce.rimona.net/assets/front/img/app.png"  style="padding:22px;width:220px;" /></a>
+<a href="https://play.google.com/store/apps/details?id=com.saeed"><img src="http://gce.rimona.net/assets/front/img/google.png"  style="padding:22px;width:220px;" /></a>
 
                     </div>
                  <div class="col-lg-4 col-xs-12">
@@ -237,26 +236,9 @@
     <!-- End finlance_we_do section -->
 
     <!-- Start finlance_fun section -->
-    @if ($bs->statistics_section == 1)
-    <section class="finlance_fun finlance_fun_v1 bg_image pt-100 pb-100" @if($bs->home_version != 'parallax') style="background-image: url('{{asset('assets/front/img/'.$be->statistics_bg)}}'); background-size:cover;" @endif id="statisticsSection" @if($bs->home_version == 'parallax') data-parallax="scroll" data-speed="0.2" data-image-src="{{asset('assets/front/img/'.$be->statistics_bg)}}" @endif>
-        <div class="bg_overlay" style="background: #{{$be->statistics_overlay_color}};opacity: {{$be->statistics_overlay_opacity}};"></div>
-        <div class="container">
-            <div class="row">
-                @foreach ($statistics as $key => $statistic)
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="counter_box">
-                            <div class="icon">
-                                <i class="{{$statistic->icon}}"></i>
-                            </div>
-                            <h2><span class="counter">{{convertUtf8($statistic->quantity)}}</span>+</h2>
-                            <p>{{convertUtf8($statistic->title)}}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    @endif
+   
+   
+   
     <!-- End finlance_fun section -->
 
     <!-- Start finlance_testimonial section -->
@@ -430,6 +412,14 @@
 
     <section class="finlance_partner partner_v1 pt-125 pb-125">
         <div class="container">
+             <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-right">
+                        <span>وكالتنا الحصرية</span>
+                    </div>
+                </div>
+               
+            </div>
             <div class="partner_slide">
                 @foreach ($partners as $key => $partner)
                     <div class="single_partner">
@@ -441,7 +431,24 @@
     </section>
     
     <!-- End finlance_partner section -->
-
+ <section class="finlance_fun finlance_fun_v1 bg_image pt-100 pb-100" @if($bs->home_version != 'parallax') style="background-image: url('{{asset('assets/front/img/'.$be->statistics_bg)}}'); background-size:cover;" @endif id="statisticsSection" @if($bs->home_version == 'parallax') data-parallax="scroll" data-speed="0.2" data-image-src="{{asset('assets/front/img/'.$be->statistics_bg)}}" @endif>
+        <div class="bg_overlay" style="background: #{{$be->statistics_overlay_color}};opacity: {{$be->statistics_overlay_opacity}};"></div>
+        <div class="container">
+            <div class="row">
+                @foreach ($statistics as $key => $statistic)
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="counter_box">
+                            <div class="icon">
+                                <i class="{{$statistic->icon}}"></i>
+                            </div>
+                            <h2><span class="counter">{{convertUtf8($statistic->quantity)}}</span>+</h2>
+                            <p>{{convertUtf8($statistic->title)}}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
     <!-- Start finlance_cta section -->
     @if ($bs->call_to_action_section == 1)
     <section class="finlance_cta cta_v1 main_bg pt-70 pb-70">
