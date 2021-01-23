@@ -35,6 +35,7 @@
                                 </div>
                                 <div class="finlance_content">
                                     <h4>{{convertUtf8($feature->title)}}</h4>
+                                    <p>{{convertUtf8($feature->title)}}</p>
                                 </div>
                             </div>
                         </div>
