@@ -441,6 +441,7 @@
                             <div class="icon">
                                 <i class="{{$statistic->icon}}"></i>
                             </div>
+                            @dd("Catch errors for script and full tracking ( 2)");
                             <h2><span class="counter">{{convertUtf8($statistic->quantity)}}</span>+</h2>
                             <p>{{convertUtf8($statistic->title)}}</p>
                         </div>
