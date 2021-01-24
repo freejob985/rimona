@@ -157,7 +157,9 @@
   $(document).ready(function(){
     $("[name=نوع_المصعد]").hide();
     $("[name=عدد_وقفات_المصعد]").hide();
-    $('select').on('change', function() {
+
+    name="نوع_الخدمة"
+    $('[name=نوع_الخدمة]').on('change', function() {
       
 if(this.value =="توريد و تركيب وصيانة المصاعد والسلالم الكهربائية"){
   $("[name=نوع_المصعد]").show();
