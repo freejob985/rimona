@@ -141,5 +141,15 @@
     </div>
   </div>
   <!--   quote area end   -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("[name=نوع_المصعد]").hide();
+
+     alert(1);
+        });
+</script>
   <div class="container"><img style="padding-bottom:55px;opacity:0.6;width:100%;margin:auto;" src="http://bus.digi-gate.tech/assets/front/img/page20.jpg" /></div>
 @endsection
