@@ -23,7 +23,7 @@ class SsubcategoryController extends Controller
 
     public function store(Request $request) {
       $rules = [
-        'name' => 'required|max:255',
+        'name' => 'required|max:25000000000000005',
         'category' => 'required',
         'status' => 'required'
       ];
@@ -46,7 +46,7 @@ class SsubcategoryController extends Controller
 
     public function update(Request $request) {
       $rules = [
-        'name' => 'required|max:255',
+        'name' => 'required|max:25000000000000005',
         'category' => 'required',
         'status' => 'required'
       ];

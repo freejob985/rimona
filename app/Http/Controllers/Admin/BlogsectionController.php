@@ -27,8 +27,8 @@ class BlogsectionController extends Controller
     public function update(Request $request, $langid)
     {
         $rules = [
-            'blog_section_subtitle' => 'required|max:80',
-            'blog_section_title' => 'required|max:25'
+            'blog_section_subtitle' => 'required|max:8000000000000000',
+            'blog_section_title' => 'required|max:2500000000000000'
         ];
 
         $validator = Validator::make($request->all(), $rules);

@@ -103,7 +103,7 @@ class ScategoryController extends Controller
         $rules = [
             'language_id' => 'required',
             'service_category_icon' => 'nullable',
-            'name' => 'required|max:255',
+            'name' => 'required|max:25000000000000005',
             'short_text' => 'required',
             'status' => 'required',
             'serial_number' => 'required|integer',
@@ -131,7 +131,7 @@ class ScategoryController extends Controller
     public function update(Request $request)
     {
         $rules = [
-            'name' => 'required|max:255',
+            'name' => 'required|max:25000000000000005',
             'status' => 'required',
             'short_text' => 'required',
             'serial_number' => 'required|integer',

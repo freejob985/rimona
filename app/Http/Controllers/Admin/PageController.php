@@ -38,7 +38,7 @@ class PageController extends Controller
 
         $rules = [
             'language_id' => 'required',
-            'name' => 'required|max:25',
+            'name' => 'required|max:2500000000000000',
             'title' => 'required|max:30',
             'subtitle' => 'required|max:38',
             'body' => 'required',
@@ -80,7 +80,7 @@ class PageController extends Controller
         $slug = make_slug($request->name);
 
         $rules = [
-            'name' => 'required|max:25',
+            'name' => 'required|max:2500000000000000',
             'title' => 'required|max:30',
             'subtitle' => 'required|max:38',
             'body' => 'required',

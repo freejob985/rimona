@@ -105,10 +105,10 @@ class IntrosectionController extends Controller
     public function update(Request $request, $langid)
     {
         $rules = [
-            'intro_section_title' => 'required|max:25',
+            'intro_section_title' => 'required|max:2500000000000000',
             'intro_section_text' => 'required',
             'intro_section_button_text' => 'nullable|max:15',
-            'intro_section_button_url' => 'nullable|max:255',
+            'intro_section_button_url' => 'nullable|max:25000000000000005',
             'intro_section_video_link' => 'nullable'
         ];
 

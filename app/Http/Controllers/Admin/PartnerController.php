@@ -67,7 +67,7 @@ class PartnerController extends Controller
         $rules = [
             'language_id' => 'required',
             'partner_image' => 'required',
-            'url' => 'required|max:255',
+            'url' => 'required|max:25000000000000005',
             'serial_number' => 'required|integer',
         ];
 
@@ -127,7 +127,7 @@ class PartnerController extends Controller
     public function update(Request $request)
     {
         $rules = [
-            'url' => 'required|max:255',
+            'url' => 'required|max:25000000000000005',
             'serial_number' => 'required|integer',
         ];
 

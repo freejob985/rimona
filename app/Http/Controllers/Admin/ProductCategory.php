@@ -31,7 +31,7 @@ class ProductCategory extends Controller
 
         $rules = [
             'language_id' => 'required',
-            'name' => 'required|max:255',
+            'name' => 'required|max:25000000000000005',
             'status' => 'required',
         ];
 

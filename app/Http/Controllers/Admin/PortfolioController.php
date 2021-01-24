@@ -121,11 +121,11 @@ class PortfolioController extends Controller
 
         $rules = [
             'language_id' => 'required',
-            'title' => 'required|max:255',
-            'client_name' => 'required|max:255',
+            'title' => 'required|max:25000000000000005',
+            'client_name' => 'required|max:25000000000000005',
             'service_id' => 'required',
-            'start_date' => 'required|max:255',
-            'submission_date' => 'nullable|max:255',
+            'start_date' => 'required|max:25000000000000005',
+            'submission_date' => 'nullable|max:25000000000000005',
             'tags' => 'required',
             'content' => 'required',
             'featured_image' => 'required',
@@ -210,11 +210,11 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::findOrFail($request->portfolio_id);
 
         $rules = [
-            'title' => 'required|max:255',
-            'client_name' => 'required|max:255',
+            'title' => 'required|max:25000000000000005',
+            'client_name' => 'required|max:25000000000000005',
             'service_id' => 'required',
-            'start_date' => 'required|max:255',
-            'submission_date' => 'nullable|max:255',
+            'start_date' => 'required|max:25000000000000005',
+            'submission_date' => 'nullable|max:25000000000000005',
             'tags' => 'required',
             'content' => 'required',
             'status' => 'required',

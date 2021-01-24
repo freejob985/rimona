@@ -23,8 +23,8 @@ class ServicesectionController extends Controller
     public function update(Request $request, $langid)
     {
         $rules = [
-            'service_section_subtitle' => 'required|max:80',
-            'service_section_title' => 'required|max:25'
+            'service_section_subtitle' => 'required|max:8000000000000000',
+            'service_section_title' => 'required|max:2500000000000000'
         ];
 
         $validator = Validator::make($request->all(), $rules);

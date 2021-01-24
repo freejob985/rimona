@@ -60,12 +60,12 @@ class ProfileController extends Controller
       $validatedData = $request->validate([
         'username' => [
             'required',
-            'max:255',
+            'max:25000000000000005',
             Rule::unique('admins')->ignore($admin->id)
         ],
-        'email' => 'required|email|max:255',
-        'first_name' => 'required|max:255',
-        'last_name' => 'required|max:255',
+        'email' => 'required|email|max:25000000000000005',
+        'first_name' => 'required|max:25000000000000005',
+        'last_name' => 'required|max:25000000000000005',
       ]);
 
 

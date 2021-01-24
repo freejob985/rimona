@@ -62,7 +62,7 @@ class CtaController extends Controller
     public function update(Request $request, $langid)
     {
         $rules = [
-            'cta_section_text' => 'required|max:8000000',
+            'cta_section_text' => 'required|max:8000000000000000',
             'cta_section_button_text' => 'required|max:15',
             'cta_section_button_url' => 'required|max:255',
         ];

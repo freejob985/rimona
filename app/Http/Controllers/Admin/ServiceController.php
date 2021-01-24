@@ -95,7 +95,7 @@ class ServiceController extends Controller
         $rules = [
             'language_id' => 'required',
             'service_image' => 'required',
-            'title' => 'required|max:255',
+            'title' => 'required|max:25000000000000005',
             'serial_number' => 'required',
             'content' => 'required',
             'details_page_status' => 'required',
@@ -148,7 +148,7 @@ class ServiceController extends Controller
         $be = $language->basic_extended;
 
         $rules = [
-            'title' => 'required|max:255',
+            'title' => 'required|max:25000000000000005',
             'content' => 'required',
             'serial_number' => 'required',
             'details_page_status' => 'required',

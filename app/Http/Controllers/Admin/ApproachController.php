@@ -73,10 +73,10 @@ class ApproachController extends Controller
     public function update(Request $request, $langid)
     {
         $request->validate([
-            'approach_section_title' => 'required|max:25',
-            'approach_section_subtitle' => 'required|max:80',
+            'approach_section_title' => 'required|max:2500000000000000',
+            'approach_section_subtitle' => 'required|max:8000000000000000',
             'approach_section_button_text' => 'nullable|max:15',
-            'approach_section_button_url' => 'nullable|max:255',
+            'approach_section_button_url' => 'nullable|max:25000000000000005',
         ]);
 
         $bs = BS::where('language_id', $langid)->firstOrFail();

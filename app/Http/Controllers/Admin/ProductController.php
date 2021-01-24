@@ -161,7 +161,7 @@ class ProductController extends Controller
 
         $rules = [
             'language_id' => 'required',
-            'title' => 'required|max:255',
+            'title' => 'required|max:25000000000000005',
             'category_id' => 'required',
             'tags' => 'required',
             'stock' => 'required',
@@ -228,7 +228,7 @@ class ProductController extends Controller
 
         $rules = [
 
-            'title' => 'required|max:255',
+            'title' => 'required|max:25000000000000005',
             'category_id' => 'required',
             'tags' => 'required',
             'stock' => 'required',
