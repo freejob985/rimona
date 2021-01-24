@@ -63,8 +63,8 @@ class CtaController extends Controller
     {
         $rules = [
             'cta_section_text' => 'required|max:8000000000000000',
-            'cta_section_button_text' => 'required|max:15',
-            'cta_section_button_url' => 'required|max:255',
+            'cta_section_button_text' => 'required|max:150000000000000000000000000',
+            'cta_section_button_url' => 'required|max:25500000000000000',
         ];
 
         $validator = Validator::make($request->all(), $rules);
