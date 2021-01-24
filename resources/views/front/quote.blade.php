@@ -171,7 +171,7 @@ if(this.value =="توريد و تركيب وصيانة المصاعد والسل
 
     
 
-     alert(1);
+ 
         });
 </script>
 <div class="container"><img style="padding-bottom:55px;opacity:0.6;width:100%;margin:auto;"
